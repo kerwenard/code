@@ -23,19 +23,19 @@ git pull
 ### 分支操作
 ```bash
 # 创建并切换到分支
-git checkout -b 分支名字
+git checkout -b 分支名
 
 # 查看分支
 git branch
 
 # 切换分支
-git checkout 分支名字
+git checkout 分支名
 
 # 合并分支
-git merge 另一个分支名字
+git merge 另一个分支名
 
 # 删除分支
-git branch -d 分支名字
+git branch -d 分支名
 
 # 强制覆盖本地文件
 git fetch --all  

@@ -2,7 +2,7 @@
 gitbook install && gitbook build
 
 # checkout to the gh-pages branch
-git checkout gh-pages
+# git checkout gh-pages
 
 # pull the latest updates
 git pull origin gh-pages --rebase
@@ -24,4 +24,4 @@ git commit -a -m "Update docs"
 git push origin gh-pages
 
 # checkout to the master branch
-git checkout master
+# git checkout master
