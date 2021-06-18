@@ -37,6 +37,7 @@
     * [基础](code/vue/basis.md)
   * [装机用环境]()
     * [node版本管理器nvm](code/other/nvm.md)
+    * [python一键安装包anaconda3](code/other/anaconda3.md)
     * [代理](code/other/ssr.md)
 * [书籍]()
     * [编程](code/book/code.md)

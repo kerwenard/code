@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gitbook · GitBook</title>
+        <title>python一键安装包anaconda3 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="ssr.html" />
     
-    <link rel="prev" href="basis.html" />
+    
+    <link rel="prev" href="nvm.html" />
     
 
     </head>
@@ -128,9 +130,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.1" data-path="basis.html">
+        <li class="chapter " data-level="1.2.1.1" data-path="../git/basis.html">
             
-                <a href="basis.html">
+                <a href="../git/basis.html">
             
                     
                     基础操作+分支(init push pull)
@@ -141,9 +143,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.1.2" data-path="gitbook.html">
+        <li class="chapter " data-level="1.2.1.2" data-path="../git/gitbook.html">
             
-                <a href="gitbook.html">
+                <a href="../git/gitbook.html">
             
                     
                     gitbook
@@ -605,9 +607,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.9.1" data-path="../other/nvm.html">
+        <li class="chapter " data-level="1.2.9.1" data-path="nvm.html">
             
-                <a href="../other/nvm.html">
+                <a href="nvm.html">
             
                     
                     node版本管理器nvm
@@ -618,9 +620,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9.2" data-path="../other/anaconda3.html">
+        <li class="chapter active" data-level="1.2.9.2" data-path="anaconda3.html">
             
-                <a href="../other/anaconda3.html">
+                <a href="anaconda3.html">
             
                     
                     python一键安装包anaconda3
@@ -631,9 +633,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9.3" data-path="../other/ssr.html">
+        <li class="chapter " data-level="1.2.9.3" data-path="ssr.html">
             
-                <a href="../other/ssr.html">
+                <a href="ssr.html">
             
                     
                     代理
@@ -716,7 +718,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >gitbook</a>
+        <a href="../.." >python一键安装包anaconda3</a>
     </h1>
 </div>
 
@@ -731,48 +733,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gitbook">gitbook</h1>
-<ul>
-<li>&#x5DF2;&#x77E5;&#x8DDF;node&#x9AD8;&#x7248;&#x672C;&#x51B2;&#x7A81;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x4F7F;&#x7528;nvm&#x5B89;&#x88C5;node&#x4F4E;&#x7248;&#x672C;&#xFF0C;&#x8BE6;&#x89C1;mvn&#x9875;</li>
-</ul>
-<h2 id="&#x5E38;&#x7528;&#x6307;&#x4EE4;">&#x5E38;&#x7528;&#x6307;&#x4EE4;</h2>
-<pre><code class="lang-bash">    <span class="hljs-comment"># &#x5B89;&#x88C5;</span>
-    npm install gitbook-cli -g
-</code></pre>
-<h2 id="github&#x7684;gh-pages&#x5206;&#x652F;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;page&#x9875;&#x9762;&#xFF0C;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x540C;&#x6B65;&#xFF0C;&#x4E00;&#x952E;&#x4EE3;&#x7801;">github&#x7684;gh-pages&#x5206;&#x652F;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;page&#x9875;&#x9762;&#xFF0C;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x540C;&#x6B65;&#xFF0C;&#x4E00;&#x952E;&#x4EE3;&#x7801;</h2>
-<ul>
-<li>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E3B;&#x5206;&#x652F;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539;gh-page&#x5206;&#x652F;</li>
-<li>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x540D;&#x4E3A;*.sh</li>
-<li>&#x81EA;&#x52A8;&#x4E0A;&#x4F20;&#xFF0C;&#x81EA;&#x52A8;&#x90E8;&#x7F72;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># install the plugins and build the static site</span>
-gitbook install &amp;&amp; gitbook build
-
-<span class="hljs-comment"># checkout to the gh-pages branch</span>
-<span class="hljs-comment"># git checkout gh-pages</span>
-
-<span class="hljs-comment"># pull the latest updates</span>
-git pull origin gh-pages --rebase
-
-<span class="hljs-comment"># copy the static site files into the current directory.</span>
-cp -R _book/* .
-
-<span class="hljs-comment"># remove &apos;node_modules&apos; and &apos;_book&apos; directory</span>
-git clean -fx node_modules
-git clean -fx _book
-
-<span class="hljs-comment"># add all files</span>
-git add .
-
-<span class="hljs-comment"># commit</span>
-git commit <span class="hljs-_">-a</span> -m <span class="hljs-string">&quot;update&quot;</span>
-
-<span class="hljs-comment"># push to the origin</span>
-git push origin gh-pages
-
-<span class="hljs-comment"># checkout to the master branch</span>
-<span class="hljs-comment"># git checkout master</span>
-</code></pre>
+                                <h1 id="python&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;anaconda3">python&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;anaconda3</h1>
+<p>&#x5B98;&#x7F51; <a href="https://www.anaconda.com/" target="_blank">https://www.anaconda.com/</a></p>
 
                                 
                                 </section>
@@ -800,10 +762,14 @@ git push origin gh-pages
 
             
                 
-                <a href="basis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 基础操作+分支(init push pull)">
+                <a href="nvm.html" class="navigation navigation-prev " aria-label="Previous page: node版本管理器nvm">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="ssr.html" class="navigation navigation-next " aria-label="Next page: 代理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -812,7 +778,7 @@ git push origin gh-pages
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook","level":"1.2.1.2","depth":3,"next":{"title":"csharp","level":"1.2.2","depth":2,"ref":"","articles":[{"title":"函数参数默认值","level":"1.2.2.1","depth":3,"path":"code/csharp/class_default.md","ref":"code/csharp/class_default.md","articles":[]},{"title":"定时器","level":"1.2.2.2","depth":3,"path":"code/csharp/timer.md","ref":"code/csharp/timer.md","articles":[]},{"title":"代码未实现放个异常","level":"1.2.2.3","depth":3,"path":"code/csharp/no_code_error.md","ref":"code/csharp/no_code_error.md","articles":[]},{"title":"文件读写","level":"1.2.2.4","depth":3,"path":"code/csharp/file.md","ref":"code/csharp/file.md","articles":[]},{"title":"post","level":"1.2.2.5","depth":3,"path":"code/csharp/post.md","ref":"code/csharp/post.md","articles":[]},{"title":"无边框窗口移动","level":"1.2.2.6","depth":3,"path":"code/csharp/rimless_window_move.md","ref":"code/csharp/rimless_window_move.md","articles":[]}]},"previous":{"title":"基础操作+分支(init push pull)","level":"1.2.1.1","depth":3,"path":"code/git/basis.md","ref":"code/git/basis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/git/gitbook.md","mtime":"2021-06-18T07:36:47.398Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-18T08:37:55.662Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"python一键安装包anaconda3","level":"1.2.9.2","depth":3,"next":{"title":"代理","level":"1.2.9.3","depth":3,"path":"code/other/ssr.md","ref":"code/other/ssr.md","articles":[]},"previous":{"title":"node版本管理器nvm","level":"1.2.9.1","depth":3,"path":"code/other/nvm.md","ref":"code/other/nvm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/other/anaconda3.md","mtime":"2021-06-18T08:37:34.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-18T08:37:55.662Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
