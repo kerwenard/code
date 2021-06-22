@@ -1,6 +1,9 @@
 多进程screen
 
 ```bash
+# 安装
+yum install screen
+
 # 创建进程
 screen -S name
 
