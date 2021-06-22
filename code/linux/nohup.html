@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>yield · GitBook</title>
+        <title>后台运行 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file.html" />
     
+    <link rel="prev" href="ssh.html" />
     
 
     </head>
@@ -354,9 +354,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.4.1" data-path="yield.html">
+        <li class="chapter " data-level="1.2.4.1" data-path="../python/yield.html">
             
-                <a href="yield.html">
+                <a href="../python/yield.html">
             
                     
                     yield
@@ -367,9 +367,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.2" data-path="file.html">
+        <li class="chapter " data-level="1.2.4.2" data-path="../python/file.html">
             
-                <a href="file.html">
+                <a href="../python/file.html">
             
                     
                     各种文件与文件夹操作
@@ -380,9 +380,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.3" data-path="coding.html">
+        <li class="chapter " data-level="1.2.4.3" data-path="../python/coding.html">
             
-                <a href="coding.html">
+                <a href="../python/coding.html">
             
                     
                     保存读取指定编码
@@ -393,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.4" data-path="str_format.html">
+        <li class="chapter " data-level="1.2.4.4" data-path="../python/str_format.html">
             
-                <a href="str_format.html">
+                <a href="../python/str_format.html">
             
                     
                     字符串的各种操作
@@ -406,9 +406,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.5" data-path="json.html">
+        <li class="chapter " data-level="1.2.4.5" data-path="../python/json.html">
             
-                <a href="json.html">
+                <a href="../python/json.html">
             
                     
                     json文件保存与读取
@@ -502,9 +502,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.7.1" data-path="../linux/docker.html">
+        <li class="chapter " data-level="1.2.7.1" data-path="docker.html">
             
-                <a href="../linux/docker.html">
+                <a href="docker.html">
             
                     
                     centos6.X安装docker
@@ -515,9 +515,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.2" data-path="../linux/screen.html">
+        <li class="chapter " data-level="1.2.7.2" data-path="screen.html">
             
-                <a href="../linux/screen.html">
+                <a href="screen.html">
             
                     
                     多进程screen
@@ -528,9 +528,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.3" data-path="../linux/file.html">
+        <li class="chapter " data-level="1.2.7.3" data-path="file.html">
             
-                <a href="../linux/file.html">
+                <a href="file.html">
             
                     
                     传送和下载文件
@@ -541,9 +541,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.4" data-path="../linux/ssh.html">
+        <li class="chapter " data-level="1.2.7.4" data-path="ssh.html">
             
-                <a href="../linux/ssh.html">
+                <a href="ssh.html">
             
                     
                     ssh
@@ -554,9 +554,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.5" data-path="../linux/nohup.html">
+        <li class="chapter active" data-level="1.2.7.5" data-path="nohup.html">
             
-                <a href="../linux/nohup.html">
+                <a href="nohup.html">
             
                     
                     后台运行
@@ -729,7 +729,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >yield</a>
+        <a href="../.." >后台运行</a>
     </h1>
 </div>
 
@@ -744,35 +744,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="yield">yield</h1>
-<p>yield&#x5177;&#x6709;&#x4E00;&#x4E2A;return&#x529F;&#x80FD;</p>
-<p>&#x540C;&#x65F6;&#x6240;&#x5728;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4E0D;&#x540C;</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">yield_test</span><span class="hljs-params">(n)</span>:</span>  
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):  
-        print(<span class="hljs-string">&apos;1&apos;</span>)  
-        <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span> <span class="hljs-comment"># &#x6267;&#x884C;&#x5230;&#x6B64;&#x5904;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0B;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;</span>
-        print(<span class="hljs-string">&quot;2&quot;</span>)  
+                                <h1 id="&#x540E;&#x53F0;&#x8FD0;&#x884C;">&#x540E;&#x53F0;&#x8FD0;&#x884C;</h1>
+<h2 id="&#x4EC5;&#x5728;&#x7EC8;&#x7AEF;&#x5F00;&#x542F;&#x65F6;&#x540E;&#x53F0;&#x8FD0;&#x884C;">&#x4EC5;&#x5728;&#x7EC8;&#x7AEF;&#x5F00;&#x542F;&#x65F6;&#x540E;&#x53F0;&#x8FD0;&#x884C;</h2>
+<p>&#x6307;&#x4EE4;&#x672B;&#x5C3E;&#x52A0;&#x4E0A; &amp;</p>
+<h2 id="&#x7EC8;&#x7AEF;&#x5173;&#x95ED;&#x540E;&#x8FD8;&#x80FD;&#x8FD0;&#x884C;">&#x7EC8;&#x7AEF;&#x5173;&#x95ED;&#x540E;&#x8FD8;&#x80FD;&#x8FD0;&#x884C;</h2>
+<p>&#x6307;&#x4EE4;&#x524D;&#x9762;&#x52A0;&#x4E0A; nohup </p>
+<h2 id="&#x76F8;&#x5173;">&#x76F8;&#x5173;</h2>
+<p>ps &#x67E5;&#x770B;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;</p>
+<p>kill &#x6740;&#x6389;&#x8FDB;&#x7A0B;&#x53F7;</p>
 
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> yield_test(<span class="hljs-number">5</span>):  
-    print(<span class="hljs-string">&quot;-------------&quot;</span>)
-</code></pre>
-<p>&#x65E5;&#x5FD7;</p>
-<pre><code>1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-</code></pre>
                                 
                                 </section>
                             
@@ -799,10 +779,10 @@
 
             
                 
-                
-                <a href="file.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 各种文件与文件夹操作">
-                    <i class="fa fa-angle-right"></i>
+                <a href="ssh.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ssh">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -811,7 +791,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"yield","level":"1.2.4.1","depth":3,"next":{"title":"各种文件与文件夹操作","level":"1.2.4.2","depth":3,"path":"code/python/file.md","ref":"code/python/file.md","articles":[]},"previous":{"title":"python","level":"1.2.4","depth":2,"ref":"","articles":[{"title":"yield","level":"1.2.4.1","depth":3,"path":"code/python/yield.md","ref":"code/python/yield.md","articles":[]},{"title":"各种文件与文件夹操作","level":"1.2.4.2","depth":3,"path":"code/python/file.md","ref":"code/python/file.md","articles":[]},{"title":"保存读取指定编码","level":"1.2.4.3","depth":3,"path":"code/python/coding.md","ref":"code/python/coding.md","articles":[]},{"title":"字符串的各种操作","level":"1.2.4.4","depth":3,"path":"code/python/str_format.md","ref":"code/python/str_format.md","articles":[]},{"title":"json文件保存与读取","level":"1.2.4.5","depth":3,"path":"code/python/json.md","ref":"code/python/json.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/yield.md","mtime":"2021-06-22T05:36:46.742Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-22T05:45:12.177Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"后台运行","level":"1.2.7.5","depth":3,"next":{"title":"vue","level":"1.2.8","depth":2,"ref":"","articles":[{"title":"基础","level":"1.2.8.1","depth":3,"path":"code/vue/basis.md","ref":"code/vue/basis.md","articles":[]}]},"previous":{"title":"ssh","level":"1.2.7.4","depth":3,"path":"code/linux/ssh.md","ref":"code/linux/ssh.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/linux/nohup.md","mtime":"2021-06-22T05:44:54.057Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-22T05:45:12.177Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

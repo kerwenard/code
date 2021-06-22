@@ -33,6 +33,7 @@
     * [多进程screen](code/linux/screen.md)
     * [传送和下载文件](code/linux/file.md)
     * [ssh](code/linux/ssh.md)
+    * [后台运行](code/linux/nohup.md)
   * [vue]()
     * [基础](code/vue/basis.md)
   * [装机用环境]()
