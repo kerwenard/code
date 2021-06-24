@@ -7,6 +7,9 @@ firewall-cmd --query-port=80/tcp --zone=public
 # 添加80端口
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 
+# 成功后需要重启
+init 6
+
 # 如果出现FirewallD is not running
 # 查看防火墙状态
 systemctl status firewalld
