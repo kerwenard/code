@@ -24,6 +24,8 @@
     * [enum赋值](code/java/enum.md)
   * [python]()
     * [更新pip](code/python/updatepip.md)
+    * [多线程](code/python/thread.md)
+    * [markdown生成](code/python/fmkd.md)
     * [yield](code/python/yield.md)
     * [各种文件与文件夹操作](code/python/file.md)
     * [保存读取指定编码](code/python/coding.md)
