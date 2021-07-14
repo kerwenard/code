@@ -45,6 +45,7 @@
   * [vue]()
     * [基础](code/vue/basis.md)
   * [装机用环境]()
+    * [常用软件包](code/other/install.md)
     * [windows快捷包管理器](code/other/package.md)
     * [node版本管理器nvm](code/other/nvm.md)
     * [python一键安装包anaconda3](code/other/anaconda3.md)
