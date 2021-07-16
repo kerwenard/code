@@ -5,6 +5,7 @@
   * [git]()
     * [基础操作+分支(init push pull)](code/git/basis.md)
     * [gitbook](code/git/gitbook.md)
+    * [设置代理](code/git/proxy.md)
   * [csharp]()
     * [函数参数默认值](code/csharp/class_default.md)
     * [定时器](code/csharp/timer.md)
