@@ -1,8 +1,11 @@
+timedatectl set-timezone Asia/Shanghai
+
 yum install git
 pip3 install --upgrade pip
 pip3 install scrapy
 pip3 install scrapy-splash
 pip3 install flask
+pip3 install APScheduler -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip3 install requests==2.20 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip3 install fake-useragent -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip3 install schedule -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
