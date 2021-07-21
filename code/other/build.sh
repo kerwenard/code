@@ -3,6 +3,7 @@ timedatectl set-timezone Asia/Shanghai
 yum install git
 bash Anaconda3-2021.05-Linux-x86_64.sh
 pip3 install --upgrade pip
+pip3 install tmux
 pip3 install scrapy
 pip3 install scrapy-splash
 pip3 install flask
