@@ -43,6 +43,7 @@
     * [传送和下载文件](code/linux/file.md)
     * [ssh](code/linux/ssh.md)
     * [后台运行](code/linux/nohup.md)
+    * [多进程运行tmux](code/linux/tmux.md)
   * [vue]()
     * [基础](code/vue/basis.md)
   * [装机用环境]()
