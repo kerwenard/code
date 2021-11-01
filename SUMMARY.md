@@ -52,5 +52,7 @@
     * [node版本管理器nvm](code/other/nvm.md)
     * [python一键安装包anaconda3](code/other/anaconda3.md)
     * [代理](code/other/ssr.md)
+  * [MYSQL数据库]()
+    * [局域网访问](code/mysql/connect.md)
 * [书籍]()
     * [编程](code/book/code.md)
