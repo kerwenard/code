@@ -24,6 +24,7 @@
     * [crc校验](code/java/crc.md)
     * [enum赋值](code/java/enum.md)
   * [python]()
+    * [基础类](code/python/class.md)
     * [更新pip](code/python/updatepip.md)
     * [多线程](code/python/thread.md)
     * [markdown生成](code/python/fmkd.md)
