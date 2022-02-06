@@ -6,7 +6,7 @@
     # 查看本地ssh公钥
     cat ~/.ssh/id_rsa.pub
 
-    # 如果没有公钥，需要先创建公钥，下一句是公钥的保存地址
+    # 如果没有公钥，需要先创建公钥，回车后会提示输入公钥的保存地址
     ssh-keygen -t rsa
     # 修改key标识
     ssh-keygen -t rsa -C "标识名"
