@@ -952,8 +952,33 @@
 <pre><code class="lang-bash">    <span class="hljs-comment"># &#x67E5;&#x770B;&#x672C;&#x5730;ssh&#x516C;&#x94A5;</span>
     cat ~/.ssh/id_rsa.pub
 
-    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709;&#x516C;&#x94A5;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x516C;&#x94A5;</span>
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709;&#x516C;&#x94A5;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x516C;&#x94A5;&#xFF0C;&#x4E0B;&#x4E00;&#x53E5;&#x662F;&#x516C;&#x94A5;&#x7684;&#x4FDD;&#x5B58;&#x5730;&#x5740;</span>
     ssh-keygen -t rsa
+    <span class="hljs-comment"># &#x4FEE;&#x6539;key&#x6807;&#x8BC6;</span>
+    ssh-keygen -t rsa -C <span class="hljs-string">&quot;&#x6807;&#x8BC6;&#x540D;&quot;</span>
+</code></pre>
+<h2 id="&#x4E0D;&#x540C;&#x7F51;&#x7AD9;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x516C;&#x94A5;">&#x4E0D;&#x540C;&#x7F51;&#x7AD9;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x516C;&#x94A5;</h2>
+<pre><code class="lang-bash">    <span class="hljs-comment"># &#x4F7F;&#x7528;git&#x7684;bash</span>
+    <span class="hljs-comment"># &#x67E5;&#x8BE2;&#x73B0;&#x6709;&#x4EE3;&#x7406;</span>
+    ssh-add <span class="hljs-_">-l</span>
+    <span class="hljs-comment"># &#x5220;&#x9664;&#x4EE3;&#x7406;</span>
+    ssh-add -D
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x79C1;&#x94A5;</span>
+    ssh-add ~/.ssh/github
+
+    <span class="hljs-comment"># &#x63D0;&#x793A;Could not open a connection to your authentication agent.&#x65F6;&#x6267;&#x884C;</span>
+    <span class="hljs-built_in">exec</span> ssh-agent bash
+</code></pre>
+<p>ssh&#x76EE;&#x5F55;&#x4E0B;&#x9700;&#x8981;&#x589E;&#x52A0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;config</p>
+<pre><code class="lang-text"># github&#x914D;&#x7F6E;
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+</code></pre>
+<p>&#x9A8C;&#x8BC1;</p>
+<pre><code class="lang-bash">ssh -T git@github.com
 </code></pre>
 <h2 id="&#x514D;&#x5BC6;&#x767B;&#x5F55;">&#x514D;&#x5BC6;&#x767B;&#x5F55;</h2>
 <pre><code class="lang-bash">    <span class="hljs-comment"># ssh&#x516C;&#x94A5;&#x590D;&#x5236;&#x5230;&#x4E3B;&#x673A;&#xFF0C;&#x767B;&#x5F55;&#x540D;@ip</span>
@@ -1020,7 +1045,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ssh","level":"1.2.7.5","depth":3,"next":{"title":"后台运行","level":"1.2.7.6","depth":3,"path":"code/linux/nohup.md","ref":"code/linux/nohup.md","articles":[]},"previous":{"title":"传送和下载文件","level":"1.2.7.4","depth":3,"path":"code/linux/file.md","ref":"code/linux/file.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/linux/ssh.md","mtime":"2022-02-06T10:14:33.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-06T10:15:39.171Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ssh","level":"1.2.7.5","depth":3,"next":{"title":"后台运行","level":"1.2.7.6","depth":3,"path":"code/linux/nohup.md","ref":"code/linux/nohup.md","articles":[]},"previous":{"title":"传送和下载文件","level":"1.2.7.4","depth":3,"path":"code/linux/file.md","ref":"code/linux/file.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/linux/ssh.md","mtime":"2022-02-06T10:26:58.761Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-06T10:27:41.072Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
