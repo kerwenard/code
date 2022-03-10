@@ -33,6 +33,7 @@
     * [保存读取指定编码](code/python/coding.md)
     * [字符串的各种操作](code/python/str_format.md)
     * [json文件保存与读取](code/python/json.md)
+    * [定时库APScheduler](code/python/apscheduler.md)
   * [vim]()
     * [宏](code/vim/def.md)
   * [powershell]()
