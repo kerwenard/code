@@ -1,4 +1,4 @@
-后台含终端运行screen
+# screen后台含终端运行
 
 ```bash
 # 安装
