@@ -47,6 +47,7 @@
     * [ssh](code/linux/ssh.md)
     * [后台运行](code/linux/nohup.md)
     * [多进程运行tmux](code/linux/tmux.md)
+    * [修改dns](code/linux/dns.md)
   * [vue]()
     * [基础](code/vue/basis.md)
   * [装机用环境]()
