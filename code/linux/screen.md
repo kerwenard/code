@@ -1,4 +1,4 @@
-多进程screen
+后台含终端运行screen
 
 ```bash
 # 安装
