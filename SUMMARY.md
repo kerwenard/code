@@ -35,6 +35,7 @@
     * [json文件保存与读取](code/python/json.md)
     * [定时库APScheduler](code/python/apscheduler.md)
     * [stmp邮件](code/python/stmp.md)
+    * [插件化代码](code/python/plugins.md)
   * [vim]()
     * [宏](code/vim/def.md)
   * [powershell]()
