@@ -36,6 +36,7 @@
     * [定时库APScheduler](code/python/apscheduler.md)
     * [stmp邮件](code/python/stmp.md)
     * [插件化代码](code/python/plugins.md)
+    * [变量类型与默认值](code/python/defalut.md)
   * [vim]()
     * [宏](code/vim/def.md)
   * [powershell]()
