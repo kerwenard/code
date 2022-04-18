@@ -37,6 +37,7 @@
     * [stmp邮件](code/python/stmp.md)
     * [插件化代码](code/python/plugins.md)
     * [变量类型与默认值](code/python/defalut.md)
+    * [无头浏览器](code/python/chrome.md)
   * [vim]()
     * [宏](code/vim/def.md)
   * [powershell]()
