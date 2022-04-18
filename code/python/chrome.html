@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>yield · GitBook</title>
+        <title>无头浏览器 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file.html" />
     
-    
-    <link rel="prev" href="fmkd.html" />
+    <link rel="prev" href="defalut.html" />
     
 
     </head>
@@ -473,7 +471,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4.5" data-path="yield.html">
+        <li class="chapter " data-level="1.2.4.5" data-path="yield.html">
             
                 <a href="yield.html">
             
@@ -590,7 +588,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.14" data-path="chrome.html">
+        <li class="chapter active" data-level="1.2.4.14" data-path="chrome.html">
             
                 <a href="chrome.html">
             
@@ -1036,7 +1034,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >yield</a>
+        <a href="../.." >无头浏览器</a>
     </h1>
 </div>
 
@@ -1051,35 +1049,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="yield">yield</h1>
-<p>yield&#x5177;&#x6709;&#x4E00;&#x4E2A;return&#x529F;&#x80FD;</p>
-<p>&#x540C;&#x65F6;&#x6240;&#x5728;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4E0D;&#x540C;</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">yield_test</span><span class="hljs-params">(n)</span>:</span>  
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):  
-        print(<span class="hljs-string">&apos;1&apos;</span>)  
-        <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span> <span class="hljs-comment"># &#x6267;&#x884C;&#x5230;&#x6B64;&#x5904;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0B;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;</span>
-        print(<span class="hljs-string">&quot;2&quot;</span>)  
+                                <h1 id="&#x65E0;&#x5934;&#x6D4F;&#x89C8;&#x5668;">&#x65E0;&#x5934;&#x6D4F;&#x89C8;&#x5668;</h1>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.chrome.options <span class="hljs-keyword">import</span> Options
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC
+<span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait <span class="hljs-keyword">as</span> Wait
 
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> yield_test(<span class="hljs-number">5</span>):  
-    print(<span class="hljs-string">&quot;-------------&quot;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_cookies</span><span class="hljs-params">(url)</span>:</span>
+    chrome_options = Options()
+    <span class="hljs-comment"># &#x663E;&#x793A; Chrome &#x6D4F;&#x89C8;&#x5668;&#x5F39;&#x51FA;&#x754C;&#x9762;</span>
+    chrome_options.add_argument(<span class="hljs-string">&quot;window-size=800x600&quot;</span>)
+    experimentalFlags = [
+        <span class="hljs-string">&quot;same-site-by-default-cookies@1&quot;</span>,
+        <span class="hljs-string">&quot;cookies-without-same-site-must-be-secure@2&quot;</span>,
+    ]
+    chromeLocalStatePrefs = {
+        <span class="hljs-string">&quot;browser.enabled_labs_experiments&quot;</span>: experimentalFlags}
+    chrome_options.add_experimental_option(<span class="hljs-string">&quot;localState&quot;</span>, chromeLocalStatePrefs)
+
+    browser = <span class="hljs-keyword">None</span>
+    <span class="hljs-comment"># try:</span>
+    browser = webdriver.Chrome(<span class="hljs-string">&quot;chromedriver&quot;</span>, options=chrome_options)
+    browser.get(url)
+    Wait(browser, <span class="hljs-number">50</span>) <span class="hljs-comment"># &#x7B49;&#x5F85;</span>
+    <span class="hljs-comment"># &#x7B49;&#x5F85;&#x5143;&#x7D20;&#x540D;&#x4E3A;xx&#x7684;&#x5143;&#x7D20;&#x51FA;&#x73B0;</span>
+    Wait(browser, <span class="hljs-number">50</span>).until(
+        EC.presence_of_element_located((By.CLASS_NAME, <span class="hljs-string">&quot;transitBubble&quot;</span>)))
+    <span class="hljs-comment"># &#x83B7;&#x53D6;cookie</span>
+    cookie = browser.get_cookies()
+    <span class="hljs-comment"># &#x83B7;&#x53D6;&#x7F51;&#x9875;html</span>
+    html = browser.page_source
+
+    browser.quit()
+    <span class="hljs-keyword">return</span> html
 </code></pre>
-<p>&#x65E5;&#x5FD7;</p>
-<pre><code>1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-1
--------------
-2
-</code></pre>
+
                                 
                                 </section>
                             
@@ -1106,14 +1112,10 @@
 
             
                 
-                <a href="fmkd.html" class="navigation navigation-prev " aria-label="Previous page: markdown生成">
+                <a href="defalut.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 变量类型与默认值">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="file.html" class="navigation navigation-next " aria-label="Next page: 各种文件与文件夹操作">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1122,7 +1124,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"yield","level":"1.2.4.5","depth":3,"next":{"title":"各种文件与文件夹操作","level":"1.2.4.6","depth":3,"path":"code/python/file.md","ref":"code/python/file.md","articles":[]},"previous":{"title":"markdown生成","level":"1.2.4.4","depth":3,"path":"code/python/fmkd.md","ref":"code/python/fmkd.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/yield.md","mtime":"2022-03-30T08:35:51.611Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-18T08:22:55.095Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"无头浏览器","level":"1.2.4.14","depth":3,"next":{"title":"vim","level":"1.2.5","depth":2,"ref":"","articles":[{"title":"宏","level":"1.2.5.1","depth":3,"path":"code/vim/def.md","ref":"code/vim/def.md","articles":[]}]},"previous":{"title":"变量类型与默认值","level":"1.2.4.13","depth":3,"path":"code/python/defalut.md","ref":"code/python/defalut.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/chrome.md","mtime":"2022-04-18T08:22:19.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-18T08:22:55.095Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
