@@ -35,4 +35,10 @@ def get_cookies(url):
 
     browser.quit()
     return html
+
+
+def drag_and_drop(browser, offset):
+    '''移动某个元素'''
+    knob = browser.find_element_by_xpath('//*[@id="slide-img-btn"]')
+    ActionChains(browser).drag_and_drop_by_offset(knob, offset, 0).perform()
 ```
