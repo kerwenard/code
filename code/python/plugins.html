@@ -1072,7 +1072,7 @@
 <pre><code class="lang-python"><span class="hljs-comment"># main.py</span>
 <span class="hljs-keyword">import</span> os
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadPlugins</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_plugins</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> os.listdir(<span class="hljs-string">&quot;./plugins&quot;</span>):
         <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> filename.endswith(<span class="hljs-string">&quot;.py&quot;</span>):
             <span class="hljs-keyword">continue</span>
@@ -1082,7 +1082,7 @@
 
 
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
-    loadPlugins()
+    load_plugins()
 </code></pre>
 <pre><code class="lang-python"><span class="hljs-comment"># ./plugins/name.py</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">()</span>:</span>
@@ -1155,7 +1155,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"插件化代码","level":"1.2.4.12","depth":3,"next":{"title":"变量类型与默认值","level":"1.2.4.13","depth":3,"path":"code/python/defalut.md","ref":"code/python/defalut.md","articles":[]},"previous":{"title":"stmp邮件","level":"1.2.4.11","depth":3,"path":"code/python/stmp.md","ref":"code/python/stmp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/plugins.md","mtime":"2022-04-27T03:01:19.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-29T01:05:25.227Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"插件化代码","level":"1.2.4.12","depth":3,"next":{"title":"变量类型与默认值","level":"1.2.4.13","depth":3,"path":"code/python/defalut.md","ref":"code/python/defalut.md","articles":[]},"previous":{"title":"stmp邮件","level":"1.2.4.11","depth":3,"path":"code/python/stmp.md","ref":"code/python/stmp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/plugins.md","mtime":"2022-05-07T02:11:18.194Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-07T02:11:50.840Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
