@@ -8,7 +8,7 @@
 # main.py
 import os
 
-def loadPlugins():
+def load_plugins():
     for filename in os.listdir("./plugins"):
         if not filename.endswith(".py"):
             continue
@@ -18,7 +18,7 @@ def loadPlugins():
 
 
 if __name__ == "__main__":
-    loadPlugins()
+    load_plugins()
 
 ```
 
