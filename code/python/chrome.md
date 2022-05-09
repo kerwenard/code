@@ -42,3 +42,26 @@ def drag_and_drop(browser, offset):
     knob = browser.find_element_by_xpath('//*[@id="slide-img-btn"]')
     ActionChains(browser).drag_and_drop_by_offset(knob, offset, 0).perform()
 ```
+## 查找某元素并点击
+
+```python
+    browser.find_element_by_xpath('//*[@id="aircargoform"]/div/div[3]/input').click()
+```
+
+## 等待（隐式）
+
+```python
+    browser.implicitly_wait(3)
+```
+
+## 如果有多个窗口，切换窗口需要修改句柄
+```python
+    browser.switch_to_window(browser.window_handles[1])
+```
+
+## 等待元素出现
+
+```python
+    Wait(browser, 50).until(
+        EC.presence_of_element_located((By.XPATH, '/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/a/img')))
+```
