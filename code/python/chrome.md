@@ -45,9 +45,9 @@ chrome_options.add_argument("window-size=800x600")
 ## 用到的属性
 ```python
     # cookie
-    cookie = browser.get_cookies()
+    browser.get_cookies()
     # 网页html
-    html = browser.page_source
+    browser.page_source
 ```
 
 ## 查找某个元素
@@ -59,12 +59,11 @@ element=browser.find_element_by_xpath('//*[@id="aircargoform"]/div/div[3]/input'
 # 查找完元素后可执行操作
 element.send_keys('123123') # 向可以接受字符的元素填入字符
 element.click() # 单击操作
+element.size # 元素大小
 ```
 ## 等待
 
 ```python
-    # 隐式等待
-    browser.implicitly_wait(3)
     # 等待某个元素加载完成
     Wait(browser, 50).until(
         EC.presence_of_element_located((By.XPATH, '/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/a/img')))
