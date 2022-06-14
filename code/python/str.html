@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>stmp邮件 · GitBook</title>
+        <title>字符串格式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="plugins.html" />
     
-    
-    <link rel="prev" href="apscheduler.html" />
+    <link rel="prev" href="decorator.html" />
     
 
     </head>
@@ -551,7 +549,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4.11" data-path="stmp.html">
+        <li class="chapter " data-level="1.2.4.11" data-path="stmp.html">
             
                 <a href="stmp.html">
             
@@ -629,7 +627,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.17" data-path="str.html">
+        <li class="chapter active" data-level="1.2.4.17" data-path="str.html">
             
                 <a href="str.html">
             
@@ -1075,7 +1073,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >stmp邮件</a>
+        <a href="../.." >字符串格式</a>
     </h1>
 </div>
 
@@ -1090,51 +1088,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="stmp&#x5E93;&#x53D1;&#x9001;&#x90AE;&#x4EF6;">stmp&#x5E93;&#x53D1;&#x9001;&#x90AE;&#x4EF6;</h1>
-<p>&#x793A;&#x4F8B;</p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> smtplib
-<span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText
-<span class="hljs-keyword">from</span> email.header <span class="hljs-keyword">import</span> Header
-<span class="hljs-keyword">from</span> email.mime.multipart <span class="hljs-keyword">import</span> MIMEMultipart
-<span class="hljs-keyword">from</span> email <span class="hljs-keyword">import</span> encoders
-
-HOST = <span class="hljs-string">&apos;smtp.xxx.com&apos;</span><span class="hljs-comment"># stmp&#x670D;&#x52A1;&#x5668;</span>
-USER = <span class="hljs-string">&apos;&apos;</span><span class="hljs-comment"># &#x8D26;&#x53F7;</span>
-PASS = <span class="hljs-string">&apos;&apos;</span><span class="hljs-comment"># &#x5BC6;&#x7801;&#x6216;&#x5BC6;&#x94A5;</span>
-
-SENDER = <span class="hljs-string">&apos;&apos;</span><span class="hljs-comment"># &#x53D1;&#x9001;&#x90AE;&#x7BB1;</span>
-RECEIVERS = [<span class="hljs-string">&apos;xx@qq.com&apos;</span>, ]<span class="hljs-comment"># &#x63A5;&#x6536;&#x90AE;&#x7BB1;</span>
-
-
-message = MIMEMultipart()
-message[<span class="hljs-string">&apos;From&apos;</span>] = Header(<span class="hljs-string">&apos;&#x8FD0;&#x7EF4;&#x673A;&#x5668;&#x4EBA;&apos;</span>, <span class="hljs-string">&apos;utf-8&apos;</span>)
-message[<span class="hljs-string">&apos;To&apos;</span>] = Header(<span class="hljs-string">&apos;&#x72B6;&#x6001;&apos;</span>, <span class="hljs-string">&apos;utf-8&apos;</span>)
-
-subject = <span class="hljs-string">&apos;&#x62A5;&#x544A;&apos;</span>
-message[<span class="hljs-string">&apos;Subject&apos;</span>] = Header(subject, <span class="hljs-string">&apos;utf-8&apos;</span>)
-<span class="hljs-comment"># &#x6B63;&#x6587;</span>
-message.attach(MIMEText(<span class="hljs-string">&apos;&#x8FD0;&#x7EF4;&#x5907;&#x4EFD;&#x6587;&#x6863;&apos;</span>, <span class="hljs-string">&apos;plain&apos;</span>, <span class="hljs-string">&apos;utf-8&apos;</span>))
-
-<span class="hljs-keyword">with</span> open(file1_path, <span class="hljs-string">&apos;rb&apos;</span>) <span class="hljs-keyword">as</span> f:<span class="hljs-comment">#&#x6587;&#x4EF6;&#x5730;&#x5740;</span>
-    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x9644;&#x4EF6;&#x7684;MIME&#x548C;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;png&#x7C7B;&#x578B;:</span>
-    mime = MIMEBase(<span class="hljs-string">&apos;attachment&apos;</span>, <span class="hljs-string">&apos;xls&apos;</span>, filename=file1_name)<span class="hljs-comment">#&#x6587;&#x4EF6;&#x540D;</span>
-    <span class="hljs-comment"># &#x52A0;&#x4E0A;&#x5FC5;&#x8981;&#x7684;&#x5934;&#x4FE1;&#x606F;:</span>
-    mime.add_header(<span class="hljs-string">&apos;Content-Disposition&apos;</span>,
-                    <span class="hljs-string">&apos;attachment&apos;</span>, filename=file1_name)<span class="hljs-comment">#&#x6587;&#x4EF6;&#x540D;</span>
-    mime.add_header(<span class="hljs-string">&apos;Content-ID&apos;</span>, <span class="hljs-string">&apos;&lt;0&gt;&apos;</span>)
-    mime.add_header(<span class="hljs-string">&apos;X-Attachment-Id&apos;</span>, <span class="hljs-string">&apos;0&apos;</span>)
-    <span class="hljs-comment"># &#x628A;&#x9644;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x8BFB;&#x8FDB;&#x6765;:</span>
-    mime.set_payload(f.read())
-    <span class="hljs-comment"># &#x7528;Base64&#x7F16;&#x7801;:</span>
-    encoders.encode_base64(mime)
-    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5230;MIMEMultipart:</span>
-    message.attach(mime)
-
-smtpObj = smtplib.SMTP()
-smtpObj.connect(HOST, <span class="hljs-number">25</span>)    <span class="hljs-comment"># 25 &#x4E3A; SMTP &#x7AEF;&#x53E3;&#x53F7;</span>
-smtpObj.login(USER, PASS)
-smtpObj.sendmail(SENDER, RECEIVERS, message.as_string())
+                                <h1 id="&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;">&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;</h1>
+<ul>
+<li><p>f
+  &#x683C;&#x5F0F;&#x5316;&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code class="lang-python">t=<span class="hljs-string">&apos;abc&apos;</span>
+print(f<span class="hljs-string">&apos;{t}&apos;</span>) <span class="hljs-comment"># python 3.6&#x4EE5;&#x4E0A;</span>
+<span class="hljs-comment"># ----------------------------------------------------------------</span>
+abc
 </code></pre>
+</li>
+<li><p>u
+  &#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;Unicode&#x7F16;&#x7801;</p>
+<pre><code class="lang-python">print(<span class="hljs-string">u&apos;&#x4E2D;&#x6587;&apos;</span>)
+<span class="hljs-comment"># ----------------------------------------------------------------</span>
+&#x4E2D;&#x6587;
+</code></pre>
+</li>
+<li><p>r
+  &#x7533;&#x660E;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5373;&#x65E0;&#x6548;&#x5316;&#x8F6C;&#x79FB;&#x5B57;&#x7B26;</p>
+<pre><code class="lang-python">print(<span class="hljs-string">r&apos;\r\n&apos;</span>)
+<span class="hljs-comment"># ----------------------------------------------------------------</span>
+\r\n
+</code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1162,14 +1140,10 @@ smtpObj.sendmail(SENDER, RECEIVERS, message.as_string())
 
             
                 
-                <a href="apscheduler.html" class="navigation navigation-prev " aria-label="Previous page: 定时库APScheduler">
+                <a href="decorator.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 装饰器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="plugins.html" class="navigation navigation-next " aria-label="Next page: 插件化代码">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1178,7 +1152,7 @@ smtpObj.sendmail(SENDER, RECEIVERS, message.as_string())
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"stmp邮件","level":"1.2.4.11","depth":3,"next":{"title":"插件化代码","level":"1.2.4.12","depth":3,"path":"code/python/plugins.md","ref":"code/python/plugins.md","articles":[]},"previous":{"title":"定时库APScheduler","level":"1.2.4.10","depth":3,"path":"code/python/apscheduler.md","ref":"code/python/apscheduler.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/stmp.md","mtime":"2022-06-14T01:10:55.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-14T08:31:37.217Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串格式","level":"1.2.4.17","depth":3,"next":{"title":"vim","level":"1.2.5","depth":2,"ref":"","articles":[{"title":"宏","level":"1.2.5.1","depth":3,"path":"code/vim/def.md","ref":"code/vim/def.md","articles":[]}]},"previous":{"title":"装饰器","level":"1.2.4.16","depth":3,"path":"code/python/decorator.md","ref":"code/python/decorator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/str.md","mtime":"2022-06-14T08:31:09.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-14T08:31:37.217Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

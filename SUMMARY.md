@@ -40,6 +40,7 @@
     * [无头浏览器](code/python/chrome.md)
     * [添加指定路径库](code/python/add_libs.md)
     * [装饰器](code/python/decorator.md)
+    * [字符串格式](code/python/str.md)
   * [vim]()
     * [宏](code/vim/def.md)
   * [powershell]()
