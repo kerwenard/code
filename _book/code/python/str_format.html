@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>字符串的各种操作 · GitBook</title>
+        <title>字符串的格式和操作 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="json.html" />
+    <link rel="next" href="updatepip.html" />
     
     
-    <link rel="prev" href="coding.html" />
+    <link rel="prev" href="class.html" />
     
 
     </head>
@@ -434,7 +434,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.2" data-path="updatepip.html">
+        <li class="chapter active" data-level="1.2.4.2" data-path="str_format.html">
+            
+                <a href="str_format.html">
+            
+                    
+                    字符串的格式和操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="updatepip.html">
             
                 <a href="updatepip.html">
             
@@ -447,7 +460,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.3" data-path="thread.html">
+        <li class="chapter " data-level="1.2.4.4" data-path="thread.html">
             
                 <a href="thread.html">
             
@@ -460,7 +473,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.4" data-path="fmkd.html">
+        <li class="chapter " data-level="1.2.4.5" data-path="fmkd.html">
             
                 <a href="fmkd.html">
             
@@ -473,7 +486,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.5" data-path="yield.html">
+        <li class="chapter " data-level="1.2.4.6" data-path="yield.html">
             
                 <a href="yield.html">
             
@@ -486,7 +499,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.6" data-path="file.html">
+        <li class="chapter " data-level="1.2.4.7" data-path="file.html">
             
                 <a href="file.html">
             
@@ -499,25 +512,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.7" data-path="coding.html">
+        <li class="chapter " data-level="1.2.4.8" data-path="coding.html">
             
                 <a href="coding.html">
             
                     
                     保存读取指定编码
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.4.8" data-path="str_format.html">
-            
-                <a href="str_format.html">
-            
-                    
-                    字符串的各种操作
             
                 </a>
             
@@ -622,19 +622,6 @@
             
                     
                     装饰器
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.4.17" data-path="str.html">
-            
-                <a href="str.html">
-            
-                    
-                    字符串格式
             
                 </a>
             
@@ -1075,7 +1062,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >字符串的各种操作</a>
+        <a href="../.." >字符串的格式和操作</a>
     </h1>
 </div>
 
@@ -1090,7 +1077,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5404;&#x79CD;&#x64CD;&#x4F5C;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5404;&#x79CD;&#x64CD;&#x4F5C;</h1>
+                                <h1 id="&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x683C;&#x5F0F;&#x548C;&#x64CD;&#x4F5C;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x683C;&#x5F0F;&#x548C;&#x64CD;&#x4F5C;</h1>
+<h2 id="&#x524D;&#x90E8;&#x4FEE;&#x9970;&#x7B26;">&#x524D;&#x90E8;&#x4FEE;&#x9970;&#x7B26;</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x4FEE;&#x9970;&#x7B26;</td>
+<td>&#x7528;&#x6CD5;</td>
+<td>&#x4E3E;&#x4F8B;</td>
+<td>&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td>u</td>
+<td>Unicode&#x7F16;&#x7801;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x4E2D;&#x6587;</td>
+<td>print(u&apos;&#x4E2D;&#x6587;&apos;)</td>
+<td>&#x4E2D;&#x6587;</td>
+</tr>
+<tr>
+<td>r</td>
+<td>&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5373;&#x65E0;&#x6548;&#x5316;&#x8F6C;&#x610F;&#x5B57;&#x7B26;</td>
+<td>print(r&apos;\r\n&apos;)</td>
+<td>\r\n</td>
+</tr>
+<tr>
+<td>f</td>
+<td>&#x683C;&#x5F0F;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53C2;&#x8003;&apos;str&apos;.format()</td>
+<td>print(f&apos;{1+1},{&#x53D8;&#x91CF;&#x540D;}&apos;)</td>
+<td>2,&#x53D8;&#x91CF;&#x503C;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="&#x683C;&#x5F0F;&#x5316;-format">&#x683C;&#x5F0F;&#x5316; format</h2>
 <ul>
 <li>&#x65B9;&#x6CD5;1
@@ -1114,15 +1138,33 @@ str.format(&apos;b&apos;,&apos;a&apos;)
 
 # &#x8F93;&#x51FA;
 &apos;test1 a test2 b&apos;
-</code></pre><h2 id="&#x5207;&#x5272;">&#x5207;&#x5272;</h2>
-<pre><code class="lang-python">str=<span class="hljs-string">&apos;123&apos;</span>
-str=str[<span class="hljs-number">0</span>:<span class="hljs-number">1</span>]
+</code></pre><ul>
+<li>.format
+  &#x683C;&#x5F0F;&#x5316;&#x5B57;&#x7B26;&#x4E32;
+```python
+print(&apos;{}&apos;.format(&apos;abc&apos;))<h1 id="---------------------------------------------------------------">----------------------------------------------------------------</h1>
+abc</li>
+</ul>
+<p>print(&apos;{} {}&apos;.format(&apos;a&apos;, &apos;b&apos;))</p>
+<h1 id="---------------------------------------------------------------">----------------------------------------------------------------</h1>
+<p>ab</p>
+<p>print(&apos;{0} {1}&apos;.format(&apos;a&apos;, &apos;b&apos;))</p>
+<h1 id="---------------------------------------------------------------">----------------------------------------------------------------</h1>
+<p>a b</p>
+<p>print(&apos;{0} {0}&apos;.format(&apos;a&apos;, &apos;b&apos;))</p>
+<h1 id="---------------------------------------------------------------">----------------------------------------------------------------</h1>
+<p>a a</p>
+<pre><code>
+## &#x5207;&#x5272;
+
+```python
+str=&apos;123&apos;
+str=str[0:1]
 print(str)
 
-<span class="hljs-comment"># &#x8F93;&#x51FA;</span>
-<span class="hljs-string">&apos;1&apos;</span>
-</code></pre>
-<h2 id="&#x6309;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x5206;&#x5272;">&#x6309;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x5206;&#x5272;</h2>
+# &#x8F93;&#x51FA;
+&apos;1&apos;
+</code></pre><h2 id="&#x6309;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x5206;&#x5272;">&#x6309;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x5206;&#x5272;</h2>
 <pre><code class="lang-python">txt = <span class="hljs-string">&apos;a|a&apos;</span>
 x = txt.split(<span class="hljs-string">&apos;|&apos;</span>)
 </code></pre>
@@ -1153,12 +1195,12 @@ x = txt.split(<span class="hljs-string">&apos;|&apos;</span>)
 
             
                 
-                <a href="coding.html" class="navigation navigation-prev " aria-label="Previous page: 保存读取指定编码">
+                <a href="class.html" class="navigation navigation-prev " aria-label="Previous page: 基础类">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="json.html" class="navigation navigation-next " aria-label="Next page: json文件保存与读取">
+                <a href="updatepip.html" class="navigation navigation-next " aria-label="Next page: 更新pip">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1169,7 +1211,7 @@ x = txt.split(<span class="hljs-string">&apos;|&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串的各种操作","level":"1.2.4.8","depth":3,"next":{"title":"json文件保存与读取","level":"1.2.4.9","depth":3,"path":"code/python/json.md","ref":"code/python/json.md","articles":[]},"previous":{"title":"保存读取指定编码","level":"1.2.4.7","depth":3,"path":"code/python/coding.md","ref":"code/python/coding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/str_format.md","mtime":"2022-06-14T01:10:55.103Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-14T08:31:37.217Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串的格式和操作","level":"1.2.4.2","depth":3,"next":{"title":"更新pip","level":"1.2.4.3","depth":3,"path":"code/python/updatepip.md","ref":"code/python/updatepip.md","articles":[]},"previous":{"title":"基础类","level":"1.2.4.1","depth":3,"path":"code/python/class.md","ref":"code/python/class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code/python/str_format.md","mtime":"2022-06-14T08:40:50.320Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-14T08:41:06.945Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
