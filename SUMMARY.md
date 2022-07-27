@@ -40,6 +40,7 @@
     * [无头浏览器](code/python/chrome.md)
     * [添加指定路径库](code/python/add_libs.md)
     * [装饰器](code/python/decorator.md)
+    * [解决cv2缺少dll](code/python/cv2.md)
     * [excel]()
       * [xlwings](code/python/excel/xlwings.md)
   * [vim]()
