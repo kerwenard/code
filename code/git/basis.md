@@ -37,10 +37,10 @@ git merge 另一个分支名
 # 删除分支
 git branch -d 分支名
 
-# 强制覆盖本地文件
-git fetch --all  
+# 下载远程仓库最新内容
+git fetch --all 
+# 把HEAD指向最新的分支，和上面的一起用等于强制pull
 git reset --hard origin/master 
-git pull
 
 # 回退到上个版本
 git reset --hard HEAD^       
